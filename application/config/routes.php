@@ -55,5 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['home'] = 'maincon/event_list';
 $route['event'] = 'maincon/event_list';
+$route['event/create'] = 'maincon/create_event';
+$route['event/upload'] = 'maincon/upload_image';
+$route['event/delete/(:num)'] = 'maincon/delete_event/$1';
 
 $route['publikasi/event'] = 'maincon/event_publikasi';

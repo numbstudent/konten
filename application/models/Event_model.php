@@ -13,9 +13,6 @@ class Event_model extends CI_Model
         );
         $query = $this->db->select('nama_file')
                             ->get_where($this->_table, $cond);
-        // $query = $this->db->where('tanggal_mulai <=', "CURDATE()")
-        //                 ->where('tanggal_selesai >=', "CURDATE()")
-        //                 ->where('status', 1);
         return $query->result_array();
 	}
 
@@ -23,6 +20,7 @@ class Event_model extends CI_Model
 	{
         if ($slug === FALSE)
         {
+                $this->db->order_by("id", "desc");
                 $query = $this->db->get($this->_table);
                 return $query->result_array();
         }
@@ -30,4 +28,26 @@ class Event_model extends CI_Model
         $query = $this->db->get_where($this->_table, array('id' => $slug));
         return $query->row_array();
 	}
+
+        public function create_event($data)
+        {
+                $data = array(
+                'judul' => $data['judul'],
+                'pemilik' => $data['pemilik'],
+                'nama_file' => $data['nama_file'],
+                'tanggal_mulai' => $data['tanggal_mulai'],
+                'tanggal_selesai' => $data['tanggal_selesai'],
+                'status' => $data['status'],
+                );
+
+                $result = $this->db->insert($this->_table, $data);
+                return $result;
+        }
+
+        public function delete_event($id)
+        {
+		$this->db->where('id', $id);
+		$result = $this->db->delete($this->_table);
+                return $result;
+        }
 }
