@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright Yakobus Damar.</strong> Made for Santa Maria Annuntiata Sidoarjo. 
+    <strong>Copyright by Yakobus Damar.</strong> Made by hand for Santa Maria Annuntiata Sidoarjo. 
   </footer>
 
   <!-- Control Sidebar -->

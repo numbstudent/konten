@@ -137,11 +137,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <span class="badge badge-$status_label">$status</span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-info btn-sm" href="#">
+                          <!-- <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
-                          </a>
+                          </a> -->
                           <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus data?');" href="$deleteurl">
                               <i class="fas fa-trash">
                               </i>

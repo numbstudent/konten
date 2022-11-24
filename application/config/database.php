@@ -71,6 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group = 'default';
+// $active_group = 'production';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -79,6 +80,28 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => 'root',
 	'database' => 'konten',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+$db['production'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'sanmaria_kont_en',
+	'password' => 'pitik_walik_saba_k380n',
+	'database' => 'sanmaria_kont_en	',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
